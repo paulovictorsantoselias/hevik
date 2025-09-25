@@ -1,0 +1,10 @@
+if not qkd_key_bytes:
+    return jsonify({"error": "QKD key insufficient"})
+# Calcula quantas vezes a chave QKD precisa ser repetida para cobrir o tamanho de pqc_ss
+repeat_count = len(pqc_ss) // len(qkd_key_bytes) + 1
+
+# Repete a chave QKD para garantir que tenha o mesmo tamanho ou maior que pqc_ss
+extended_qkd_key = qkd_key_bytes * repeat_count
+
+# Realiza a operação XOR entre cada byte de pqc_ss e extended_qkd_key
+combined = bytes(a ^ b for a, b in zip(pqc_ss, extended_qkd_key))

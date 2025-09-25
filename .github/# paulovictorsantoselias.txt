@@ -1,0 +1,15 @@
+# paulovictorsantoselias
+
+Este repositório contém projetos e experimentos de Paulo Victor Santos Elias.
+
+## Estrutura
+
+- Documentação de projetos pessoais
+- Exemplos de código e estudos
+
+## Como usar
+
+Clone o repositório e explore os diretórios para exemplos e documentação.
+
+```sh
+git clone https://github.com/paulovictorsantoselias/<repo>
